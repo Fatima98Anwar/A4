@@ -13,6 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: List files in the context
+        run: ls -l
+
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/python-auth-example:latest .
 
