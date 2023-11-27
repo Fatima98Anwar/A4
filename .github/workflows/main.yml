@@ -17,7 +17,7 @@ jobs:
         run: ls -l
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/python-auth-example:latest .
+        run: docker build -t fammadocks/python-auth-example:latest .
 
       - name: Push Docker image to Docker Hub
         env:
